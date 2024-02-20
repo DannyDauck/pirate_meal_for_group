@@ -18,6 +18,12 @@
 		D57364162B8376280063EDFC /* ReceipDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57364152B8376280063EDFC /* ReceipDetailView.swift */; };
 		D57364182B83763A0063EDFC /* ReceipDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57364172B83763A0063EDFC /* ReceipDetailViewModel.swift */; };
 		D573641B2B83790F0063EDFC /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573641A2B83790F0063EDFC /* MainScreenView.swift */; };
+		D5A85A402B84A573001CEE78 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A85A3F2B84A573001CEE78 /* Ingredient.swift */; };
+		D5A85A422B84A5D3001CEE78 /* ShoppingListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A85A412B84A5D3001CEE78 /* ShoppingListItem.swift */; };
+		D5A85A452B84A950001CEE78 /* IngredientRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A85A442B84A950001CEE78 /* IngredientRow.swift */; };
+		D5A85A482B84ADAD001CEE78 /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A85A472B84ADAD001CEE78 /* ShoppingListViewModel.swift */; };
+		D5A85A4A2B84AFCF001CEE78 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A85A492B84AFCF001CEE78 /* ShoppingListView.swift */; };
+		D5A85A4D2B84AFFF001CEE78 /* ShoppingListItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A85A4C2B84AFFF001CEE78 /* ShoppingListItemRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +39,12 @@
 		D57364152B8376280063EDFC /* ReceipDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipDetailView.swift; sourceTree = "<group>"; };
 		D57364172B83763A0063EDFC /* ReceipDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipDetailViewModel.swift; sourceTree = "<group>"; };
 		D573641A2B83790F0063EDFC /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		D5A85A3F2B84A573001CEE78 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		D5A85A412B84A5D3001CEE78 /* ShoppingListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItem.swift; sourceTree = "<group>"; };
+		D5A85A442B84A950001CEE78 /* IngredientRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientRow.swift; sourceTree = "<group>"; };
+		D5A85A472B84ADAD001CEE78 /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
+		D5A85A492B84AFCF001CEE78 /* ShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListView.swift; sourceTree = "<group>"; };
+		D5A85A4C2B84AFFF001CEE78 /* ShoppingListItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItemRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,7 @@
 		D57363F62B835B870063EDFC /* Pirate_Meal */ = {
 			isa = PBXGroup;
 			children = (
+				D5A85A462B84AD7C001CEE78 /* ShoppingList */,
 				D57364192B8378FA0063EDFC /* MainScreen */,
 				D57364142B8375FD0063EDFC /* ReceipDetail */,
 				D573640C2B8371760063EDFC /* Models */,
@@ -99,6 +112,8 @@
 			children = (
 				D573640D2B8371860063EDFC /* Receip.swift */,
 				D573640F2B8371B90063EDFC /* SearchResult.swift */,
+				D5A85A3F2B84A573001CEE78 /* Ingredient.swift */,
+				D5A85A412B84A5D3001CEE78 /* ShoppingListItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -114,6 +129,7 @@
 		D57364142B8375FD0063EDFC /* ReceipDetail */ = {
 			isa = PBXGroup;
 			children = (
+				D5A85A432B84A93B001CEE78 /* Models */,
 				D57364152B8376280063EDFC /* ReceipDetailView.swift */,
 				D57364172B83763A0063EDFC /* ReceipDetailViewModel.swift */,
 			);
@@ -126,6 +142,32 @@
 				D573641A2B83790F0063EDFC /* MainScreenView.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		D5A85A432B84A93B001CEE78 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5A85A442B84A950001CEE78 /* IngredientRow.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D5A85A462B84AD7C001CEE78 /* ShoppingList */ = {
+			isa = PBXGroup;
+			children = (
+				D5A85A4B2B84AFE5001CEE78 /* Models */,
+				D5A85A472B84ADAD001CEE78 /* ShoppingListViewModel.swift */,
+				D5A85A492B84AFCF001CEE78 /* ShoppingListView.swift */,
+			);
+			path = ShoppingList;
+			sourceTree = "<group>";
+		};
+		D5A85A4B2B84AFE5001CEE78 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5A85A4C2B84AFFF001CEE78 /* ShoppingListItemRow.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,12 +241,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D573640B2B83714F0063EDFC /* BrowseRecipeViewModel.swift in Sources */,
+				D5A85A422B84A5D3001CEE78 /* ShoppingListItem.swift in Sources */,
 				D573641B2B83790F0063EDFC /* MainScreenView.swift in Sources */,
+				D5A85A452B84A950001CEE78 /* IngredientRow.swift in Sources */,
+				D5A85A402B84A573001CEE78 /* Ingredient.swift in Sources */,
 				D57363F82B835B870063EDFC /* Pirate_MealApp.swift in Sources */,
 				D57364132B83731F0063EDFC /* ReceipRow.swift in Sources */,
 				D57364092B83707E0063EDFC /* BrowseReceipView.swift in Sources */,
+				D5A85A4D2B84AFFF001CEE78 /* ShoppingListItemRow.swift in Sources */,
+				D5A85A4A2B84AFCF001CEE78 /* ShoppingListView.swift in Sources */,
 				D57364102B8371B90063EDFC /* SearchResult.swift in Sources */,
 				D573640E2B8371860063EDFC /* Receip.swift in Sources */,
+				D5A85A482B84ADAD001CEE78 /* ShoppingListViewModel.swift in Sources */,
 				D57364162B8376280063EDFC /* ReceipDetailView.swift in Sources */,
 				D57364182B83763A0063EDFC /* ReceipDetailViewModel.swift in Sources */,
 			);
