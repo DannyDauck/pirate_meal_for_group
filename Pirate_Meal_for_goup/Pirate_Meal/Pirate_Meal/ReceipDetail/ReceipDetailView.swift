@@ -14,8 +14,7 @@ struct ReceipDetailView: View {
     @ObservedObject var vm: ReceipDetailViewModel
     
     var body: some View {
-        VStack{
-            Spacer()
+        ScrollView{
             AsyncImage(url: URL(string: vm.image)){image in
                 image
                     .resizable()
@@ -27,13 +26,40 @@ struct ReceipDetailView: View {
                     .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             }placeholder: {
                 ProgressView()
+            }.padding()
+            
+            Text(vm.title)
+                .font(.title3)
+                .bold()
+                .padding()
+            HStack{
+                Text("Zutaten")
+                    .font(.title3)
+                    .bold()
+                    .padding()
+                Spacer()
+            }
+            VStack{
+                ForEach(vm.ingredients, id:  \.id){ingredient in
+                        IngredientRow(ingredient: ingredient)
+                }
             }
             
-            Spacer()
-            Text(vm.title)
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .bold()
-            Spacer()
+            Button(action: {
+                
+                vm.addIngredientsToShoppingList()
+                
+            }){
+                
+                Text("Zutaten zur Einkaufsliste hunzufügen")
+                
+            }.buttonStyle(.borderedProminent)
+            
+            
+            Text(vm.instruction)
+                .padding()
+                .padding(.top, 20)
+            
             
             
         }

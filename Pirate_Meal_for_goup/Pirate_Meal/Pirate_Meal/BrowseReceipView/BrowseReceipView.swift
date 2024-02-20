@@ -21,7 +21,7 @@ struct BrowseReceipView: View {
                 
             }.onAppear{
                 viewModel.loadReiceips()
-            }
+            }.navigationTitle("Rezepte")
         }
     }
 }
