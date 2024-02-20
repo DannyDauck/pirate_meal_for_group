@@ -14,7 +14,7 @@ struct IngredientRow: View {
     var body: some View {
         VStack{
             HStack{
-                Text(String(ingredient.amount))
+                Text(String(ingredient.amount.formatted()))
                 Text(ingredient.unit)
                 Text(ingredient.name)
                     .bold()

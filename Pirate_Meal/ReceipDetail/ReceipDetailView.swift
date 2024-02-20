@@ -51,7 +51,7 @@ struct ReceipDetailView: View {
                 
             }){
                 
-                Text("Zutaten zur Einkaufsliste hunzufügen")
+                Text("Zutaten zur Einkaufsliste hinzufügen")
                 
             }.buttonStyle(.borderedProminent)
             

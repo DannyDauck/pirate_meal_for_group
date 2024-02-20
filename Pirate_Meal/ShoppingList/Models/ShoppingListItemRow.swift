@@ -23,8 +23,7 @@ struct ShoppingListItemRow: View {
             Text(item.name)
                 .strikethrough(item.checked, color: .black)
                 
-            Text(String(item.quantity))
-                .lineLimit(nil)
+            Text(item.quantity.formatted())
             Text(item.unit)
             
         }

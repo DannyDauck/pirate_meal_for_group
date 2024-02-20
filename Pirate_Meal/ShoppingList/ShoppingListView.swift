@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ShoppingListView: View {
     
-    @StateObject private var vm = ShoppingListViewModel()
+    @ObservedObject var vm: ShoppingListViewModel
     
     var body: some View {
         VStack{
@@ -17,6 +17,18 @@ struct ShoppingListView: View {
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .bold()
             VStack{
+                HStack{
+                    Button(action: {
+                        vm.clearAllChecked()
+                    }, label: {
+                        Text("Wagen aufräumen")
+                        
+                    }).buttonStyle(.borderedProminent)
+                        .padding(.leading)
+                        .padding(.top)
+                    
+                    Spacer()
+                }
                 List($vm.shoppingList, id: \.id){item in
                     ShoppingListItemRow(item: item)
                         .swipeActions(edge: .trailing){
@@ -26,9 +38,8 @@ struct ShoppingListView: View {
                                 Image(systemName: "trash")
                             }
                         }.listRowBackground(Color.white.opacity(0.8))
-                }.onAppear{
-                    vm.getItems()
                 }
+                
             }
             
         }.scrollContentBackground(.hidden)
@@ -41,5 +52,5 @@ struct ShoppingListView: View {
 }
 
 #Preview {
-    ShoppingListView()
+    ShoppingListView(vm: ShoppingListViewModel())
 }

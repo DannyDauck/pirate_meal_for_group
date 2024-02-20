@@ -10,25 +10,26 @@ import SwiftUI
 struct MainScreenView: View {
     
     @State var currentTab = 1
+    @StateObject private var shoppingVM = ShoppingListViewModel()
     
     var body: some View {
-        TabView {
+        TabView(selection: $currentTab) {
             BrowseReceipView()
                 .tabItem {
                     Image(systemName:
                             currentTab == 1 ?
                           "book":"book.closed")
-                }.onAppear{
-                    currentTab = 1
-                }
+                    Text("Rezepte")
+                }.tag(1)
             
-            ShoppingListView()
+            ShoppingListView(vm: shoppingVM)
                 .tabItem {
                     Image(systemName: "cart")
-                }
-                .onAppear{
-                    currentTab = 2
-                }
+                    Text("Einkaufsliste")
+                }.badge(shoppingVM.shoppingList.filter{
+                    !$0.checked
+                }.count)
+                .tag(2)
         }
     }
 }

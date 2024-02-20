@@ -37,7 +37,7 @@ class ReceipDetailViewModel: ObservableObject{
         self.instruction = "Fang endlich an zu kochen du faule Sau"
         self.ingredients = [
             Ingredient(name: "Olivenöl", amount: 500, unit: "ml"),
-            Ingredient(name: "Basilikum", amount: 1, unit: "Bund"),
+            Ingredient(name: "Basilikum", amount: 1.5, unit: "Bund"),
             Ingredient(name: "Knoblauch", amount: 2, unit: "Zehen")
         ]
     }

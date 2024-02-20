@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BrowseReceipView: View {
     
-    @ObservedObject var viewModel = BrowseRecipeViewModel()
+    @StateObject var viewModel = BrowseRecipeViewModel()
     var body: some View {
         NavigationStack{
             List(viewModel.receips, id: \.id){ receip in
