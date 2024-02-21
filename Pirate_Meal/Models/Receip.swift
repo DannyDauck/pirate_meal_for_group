@@ -1,10 +1,9 @@
 //
-//  Receip.swift
+//  PreviewShoppingListRepository.swift
 //  Pirate_Meal
 //
-//  Created by Danny Dauck on 19.02.24.
+//  Created by Vincent Neumann, Siahrrei Wehrhahn, Mike Reichenbach and Danny Dauck on 21.02.24.
 //
-
 import Foundation
 
 
