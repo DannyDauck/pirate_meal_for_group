@@ -15,30 +15,35 @@ class ReceipDetailViewModel: ObservableObject{
     @Published var image: String
     @Published var instruction: String = ""
     @Published var ingredients: [Ingredient] = []
+    private var previewRepo: PreviewReceipeRepository
+    private var shoppingRepo = PreviewShoppingListRepository.shared
     
     init(receip: Receip){
+        self.previewRepo = .init()
         self.id = receip.id
         self.title = receip.title
         self.image = receip.image
-        loadDetails()
+        loadDetails(receip.id)
     }
     
     
     func addIngredientsToShoppingList(){
         
+        shoppingRepo.createItems(ingredients)
         
-        //TODO
     }
     
     
-    func loadDetails(){
+    func loadDetails(_ id: Int){
         
         //TODO Dummydaten ersetzen
-        self.instruction = "Fang endlich an zu kochen du faule Sau"
-        self.ingredients = [
-            Ingredient(name: "Olivenöl", amount: 500, unit: "ml"),
-            Ingredient(name: "Basilikum", amount: 1.5, unit: "Bund"),
-            Ingredient(name: "Knoblauch", amount: 2, unit: "Zehen")
-        ]
+        guard let fullReceip = previewRepo.getFullRecipeById(id) else{
+            return
+        }
+        
+        self.instruction = fullReceip.instructions
+        self.ingredients = fullReceip.extendedIngredients
+            
+        
     }
 }

@@ -10,11 +10,13 @@ import SwiftUI
 struct BrowseReceipView: View {
     
     @StateObject var viewModel = BrowseRecipeViewModel()
+    let updateList: ()->()
+    
     var body: some View {
         NavigationStack{
             List(viewModel.receips, id: \.id){ receip in
                 
-                NavigationLink(destination: ReceipDetailView(vm: ReceipDetailViewModel(receip: receip))){
+                NavigationLink(destination: ReceipDetailView(vm: ReceipDetailViewModel(receip: receip), updateShoppingList: updateList)){
                     
                     ReceipRow(receip: receip)
                 }
@@ -27,5 +29,5 @@ struct BrowseReceipView: View {
 }
 
 #Preview {
-    BrowseReceipView()
+    BrowseReceipView( updateList: {})
 }

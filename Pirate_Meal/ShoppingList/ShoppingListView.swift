@@ -38,6 +38,9 @@ struct ShoppingListView: View {
                                 Image(systemName: "trash")
                             }
                         }.listRowBackground(Color.white.opacity(0.8))
+                        .onTapGesture {
+                            vm.toggleChecked(id: item.id)
+                        }
                 }
                 
             }

@@ -11,14 +11,15 @@ import Foundation
 class BrowseRecipeViewModel: ObservableObject{
     
     @Published var receips: [Receip] = []
+    private var previewRepo: PreviewReceipeRepository
+    
+    init(){
+        self.previewRepo = .init()
+    }
     
     
     func loadReiceips(){
-        
-        self.receips = [
-            Receip(id: 716429, title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs", image: "https://spoonacular.com/recipeImages/716429-312x231.jpg"),
-            Receip(id: 715538, title: "What to make for dinner tonight?? Bruschetta Style Pork & Pasta", image: "https://spoonacular.com/recipeImages/715538-312x231.jpg")
-        ]
+        self.receips = previewRepo.searchReceipes().reults
     }
     
 }

@@ -12,6 +12,7 @@ import SwiftUI
 struct ReceipDetailView: View {
     
     @ObservedObject var vm: ReceipDetailViewModel
+    let updateShoppingList: ()->()
     
     var body: some View {
         ScrollView{
@@ -48,6 +49,7 @@ struct ReceipDetailView: View {
             Button(action: {
                 
                 vm.addIngredientsToShoppingList()
+                updateShoppingList()
                 
             }){
                 
@@ -69,5 +71,5 @@ struct ReceipDetailView: View {
 #Preview {
     ReceipDetailView(vm: ReceipDetailViewModel(receip:
                                                 Receip(id: 716429, title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs", image: "https://spoonacular.com/recipeImages/716429-312x231.jpg")
-                                              ))
+                                              ), updateShoppingList: {})
 }

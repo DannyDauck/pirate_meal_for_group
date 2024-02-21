@@ -11,6 +11,7 @@ struct ShoppingListItemRow: View {
     
     @Binding var item: ShoppingListItem
     
+    
     var body: some View {
         HStack{
             Button(action: {

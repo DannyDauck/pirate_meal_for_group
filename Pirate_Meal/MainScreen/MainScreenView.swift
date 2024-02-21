@@ -14,7 +14,7 @@ struct MainScreenView: View {
     
     var body: some View {
         TabView(selection: $currentTab) {
-            BrowseReceipView()
+            BrowseReceipView(updateList: shoppingVM.getItems)
                 .tabItem {
                     Image(systemName:
                             currentTab == 1 ?
