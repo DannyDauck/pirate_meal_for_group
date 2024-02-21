@@ -19,7 +19,11 @@ class PreviewReceipeRepository{
         FullRecipe(id: 715538, title: "What to make for dinner tonight?? Bruschetta Style Pork & Pasta", image: "https://spoonacular.com/recipeImages/715538-312x231.jpg", instructions: "Kochen was das Zeug hält", extendedIngredients: [
             Ingredient(name: "Olivenöl", amount: 500, unit: "ml"),
             Ingredient(name: "Basilikum", amount: 1.5, unit: "Bund"),
-            Ingredient(name: "Knoblauch", amount: 2, unit: "Zehen")
+            Ingredient(name: "Knoblauch", amount: 2, unit: "Zehen"),
+            Ingredient(name: "Schweinefleisch", amount: 400, unit: "g"),
+            Ingredient(name: "Pasta", amount: 300, unit: "g"),
+            Ingredient(name: "Tomaten", amount: 3, unit: "Stück"),
+            Ingredient(name: "Balsamico-Essig", amount: 2, unit: "EL")
         ])
         
         
