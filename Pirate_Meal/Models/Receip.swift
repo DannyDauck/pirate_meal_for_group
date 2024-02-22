@@ -7,7 +7,7 @@
 import Foundation
 
 
-struct Receip{
+struct Receip: Codable{
     let id: Int
     let title: String
     let image: String

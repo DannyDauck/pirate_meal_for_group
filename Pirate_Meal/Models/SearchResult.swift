@@ -8,7 +8,6 @@
 import Foundation
 
 
-struct SearchResult{
-    let reults: [Receip]
-    let total: Int
+struct SearchResult: Codable{
+    let results: [Receip]
 }

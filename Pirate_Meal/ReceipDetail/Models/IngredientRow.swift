@@ -27,5 +27,5 @@ struct IngredientRow: View {
 }
 
 #Preview {
-    IngredientRow(ingredient: Ingredient(name: "Olivenöl", amount: 200, unit: "ml"))
+    IngredientRow(ingredient: Ingredient(id: 1, name: "Olivenöl", amount: 200, unit: "ml"))
 }

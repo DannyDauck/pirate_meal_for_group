@@ -63,6 +63,9 @@ struct ReceipDetailView: View {
             
             
         }
+        .onAppear {
+            vm.loadDetails()
+        }
     }
 }
 

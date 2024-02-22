@@ -11,15 +11,21 @@ import Foundation
 class BrowseRecipeViewModel: ObservableObject{
     
     @Published var receips: [Receip] = []
-    private var previewRepo: PreviewReceipeRepository
+    private var previewRepo: APIReceipeRepository
     
     init(){
         self.previewRepo = .init()
     }
     
-    
+    @MainActor
     func loadReiceips(){
-        self.receips = previewRepo.searchReceipes().reults
+        Task {
+            do {
+                self.receips = try await previewRepo.searchReceipes("").results
+            } catch {
+                print(error)
+            }
+        }
     }
     
 }
