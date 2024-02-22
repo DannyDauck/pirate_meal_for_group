@@ -11,6 +11,11 @@ import Foundation
 class BrowseRecipeViewModel: ObservableObject{
     
     @Published var receips: [Receip] = []
+    @Published var searchString: String = ""
+    @Published var excludeIngredients: String = ""
+    @Published var vegan: Bool = false
+    @Published var glutenFree: Bool = false
+    @Published var searchIsVisible: Bool = false
     private var previewRepo: APIReceipeRepository
     
     init(){
@@ -18,7 +23,7 @@ class BrowseRecipeViewModel: ObservableObject{
     }
     
     @MainActor
-    func loadReiceips(){
+    func loadReceips(){
         Task {
             do {
                 self.receips = try await previewRepo.searchReceipes("").results
@@ -28,4 +33,24 @@ class BrowseRecipeViewModel: ObservableObject{
         }
     }
     
+    @MainActor
+    func searchReceips(){
+        Task {
+            do {
+                self.receips = try await previewRepo.searchReceipes(searchString).results
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func extendedSearch(){
+        Task{
+            do{
+                self.receips = try await previewRepo.extendedSearch(search: searchString, vegan: vegan, glutenFree: glutenFree, excludedIngredients: excludeIngredients).results
+            } catch {
+                print(error)
+            }
+        }
+    }
 }
