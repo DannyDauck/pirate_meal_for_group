@@ -44,6 +44,7 @@ class BrowseRecipeViewModel: ObservableObject{
         }
     }
     
+    @MainActor
     func extendedSearch(){
         Task{
             do{
