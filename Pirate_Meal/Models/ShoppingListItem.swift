@@ -10,7 +10,7 @@ import Foundation
 
 struct ShoppingListItem: Identifiable{
     
-    let id =  UUID()
+    let id:   Int
     let name: String
     let quantity: Double
     let unit: String

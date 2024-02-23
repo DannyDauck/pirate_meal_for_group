@@ -21,6 +21,8 @@
 		D58678072B85F58A00E5E1FB /* FullRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58678062B85F58A00E5E1FB /* FullRecipe.swift */; };
 		D586780A2B85F71100E5E1FB /* APIReceipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58678092B85F71100E5E1FB /* APIReceipeRepository.swift */; };
 		D586780C2B85FD1F00E5E1FB /* PreviewShoppingListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586780B2B85FD1F00E5E1FB /* PreviewShoppingListRepository.swift */; };
+		D58678342B8894CD00E5E1FB /* ShoppingListItemEntity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D58678322B8894CD00E5E1FB /* ShoppingListItemEntity.xcdatamodeld */; };
+		D58678362B8895AD00E5E1FB /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58678352B8895AD00E5E1FB /* PersistentStore.swift */; };
 		D5A85A402B84A573001CEE78 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A85A3F2B84A573001CEE78 /* Ingredient.swift */; };
 		D5A85A422B84A5D3001CEE78 /* ShoppingListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A85A412B84A5D3001CEE78 /* ShoppingListItem.swift */; };
 		D5A85A452B84A950001CEE78 /* IngredientRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A85A442B84A950001CEE78 /* IngredientRow.swift */; };
@@ -45,6 +47,8 @@
 		D58678062B85F58A00E5E1FB /* FullRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullRecipe.swift; sourceTree = "<group>"; };
 		D58678092B85F71100E5E1FB /* APIReceipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIReceipeRepository.swift; sourceTree = "<group>"; };
 		D586780B2B85FD1F00E5E1FB /* PreviewShoppingListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewShoppingListRepository.swift; sourceTree = "<group>"; };
+		D58678332B8894CD00E5E1FB /* ShoppingListItemEntity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingListItemEntity.xcdatamodel; sourceTree = "<group>"; };
+		D58678352B8895AD00E5E1FB /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		D5A85A3F2B84A573001CEE78 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		D5A85A412B84A5D3001CEE78 /* ShoppingListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItem.swift; sourceTree = "<group>"; };
 		D5A85A442B84A950001CEE78 /* IngredientRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientRow.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		D57363F62B835B870063EDFC /* Pirate_Meal */ = {
 			isa = PBXGroup;
 			children = (
+				D58678312B88949300E5E1FB /* CoreData */,
 				D58678082B85F6DB00E5E1FB /* Repositories */,
 				D5A85A462B84AD7C001CEE78 /* ShoppingList */,
 				D57364192B8378FA0063EDFC /* MainScreen */,
@@ -159,6 +164,15 @@
 				D586780B2B85FD1F00E5E1FB /* PreviewShoppingListRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D58678312B88949300E5E1FB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D58678322B8894CD00E5E1FB /* ShoppingListItemEntity.xcdatamodeld */,
+				D58678352B8895AD00E5E1FB /* PersistentStore.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		D5A85A432B84A93B001CEE78 /* Models */ = {
@@ -263,11 +277,13 @@
 				D5A85A452B84A950001CEE78 /* IngredientRow.swift in Sources */,
 				D586780C2B85FD1F00E5E1FB /* PreviewShoppingListRepository.swift in Sources */,
 				D5A85A402B84A573001CEE78 /* Ingredient.swift in Sources */,
+				D58678362B8895AD00E5E1FB /* PersistentStore.swift in Sources */,
 				D57363F82B835B870063EDFC /* Pirate_MealApp.swift in Sources */,
 				D58678072B85F58A00E5E1FB /* FullRecipe.swift in Sources */,
 				D57364132B83731F0063EDFC /* ReceipRow.swift in Sources */,
 				D57364092B83707E0063EDFC /* BrowseReceipView.swift in Sources */,
 				D586780A2B85F71100E5E1FB /* APIReceipeRepository.swift in Sources */,
+				D58678342B8894CD00E5E1FB /* ShoppingListItemEntity.xcdatamodeld in Sources */,
 				D5A85A4D2B84AFFF001CEE78 /* ShoppingListItemRow.swift in Sources */,
 				D5A85A4A2B84AFCF001CEE78 /* ShoppingListView.swift in Sources */,
 				D57364102B8371B90063EDFC /* SearchResult.swift in Sources */,
@@ -490,6 +506,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D58678322B8894CD00E5E1FB /* ShoppingListItemEntity.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D58678332B8894CD00E5E1FB /* ShoppingListItemEntity.xcdatamodel */,
+			);
+			currentVersion = D58678332B8894CD00E5E1FB /* ShoppingListItemEntity.xcdatamodel */;
+			path = ShoppingListItemEntity.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D57363EC2B835B870063EDFC /* Project object */;
 }

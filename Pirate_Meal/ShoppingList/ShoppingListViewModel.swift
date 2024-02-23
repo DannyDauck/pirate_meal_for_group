@@ -27,7 +27,7 @@ class ShoppingListViewModel: ObservableObject{
     }
     
     
-    func deleteItem(itemID: UUID){
+    func deleteItem(itemID: Int){
         shoppingRepo.deleteItem(id: itemID)
         print("try to delete")
         getItems()
@@ -39,7 +39,7 @@ class ShoppingListViewModel: ObservableObject{
     }
     
     
-    func toggleChecked(id: UUID){
+    func toggleChecked(id: Int){
         shoppingRepo.toggleChecked(id: id)
         getItems()
     }

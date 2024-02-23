@@ -32,5 +32,5 @@ struct ShoppingListItemRow: View {
 }
 
 #Preview {
-    ShoppingListItemRow(item: .constant(ShoppingListItem(name: "Jack Daniels", quantity: 2, unit: "Fl", checked: true)))
+    ShoppingListItemRow(item: .constant(ShoppingListItem(id: 0, name: "Jack Daniels", quantity: 2, unit: "Fl", checked: true)))
 }
